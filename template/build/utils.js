@@ -6,7 +6,9 @@ exports.assetsPath = function (_path) {
   var assetsSubDirectory = process.env.NODE_ENV === 'production'
     ? config.build.assetsSubDirectory
     : config.dev.assetsSubDirectory
-  return path.posix.join(assetsSubDirectory, _path)
+  var p = path.posix.join(assetsSubDirectory, _path)
+  if(process.env.NODE_ENV === 'production') p = p.replace(/\//g, '-')
+  return p
 }
 
 exports.cssLoaders = function (options) {

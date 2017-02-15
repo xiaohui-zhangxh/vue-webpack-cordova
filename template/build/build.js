@@ -18,13 +18,14 @@ console.log(
 var spinner = ora('building for production...')
 spinner.start()
 
-var assetsPath = path.join(config.build.assetsRoot, config.build.assetsSubDirectory)
-rm('-rf', assetsPath)
-mkdir('-p', assetsPath)
+rm('-rf', config.build.assetsRoot)
+mkdir('-p', config.build.assetsRoot)
 
 webpack(webpackConfig, function (err, stats) {
   spinner.stop()
   if (err) throw err
+  process.stdout.write("building for cordova...\n\n")
+  exec("cd cordova && cordova build")
   process.stdout.write(stats.toString({
     colors: true,
     modules: false,
