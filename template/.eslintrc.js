@@ -32,6 +32,7 @@ module.exports = {
     'arrow-parens': 0,
     // allow async-await
     'generator-star-spacing': 0,
+    'object-property-newline': 0,
     {{/if_eq}}
     {{#if_eq lintConfig "airbnb"}}
     // don't require .vue extension when importing

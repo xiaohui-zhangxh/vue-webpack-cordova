@@ -6,11 +6,10 @@ import Vue from 'vue'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 import App from './App'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 import router from './router'
 import store from './store'
-import cordovaSetup from './cordovaSetup'
+import CordovaHelper from './utils/CordovaHelper'
 
 /* setup cordova */
-cordovaSetup.setup()
-
+CordovaHelper.setup()
 /* fast click */
 const FastClick = require('fastclick')
 FastClick.attach(document.body)

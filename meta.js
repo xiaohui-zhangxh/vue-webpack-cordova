@@ -46,7 +46,28 @@ module.exports = {
       "type": "confirm",
       "message": "Use ESLint to lint your code?"
     },
-    "lintConfig": "standard",
+    "lintConfig": {
+      "when": "lint",
+      "type": "list",
+      "message": "Pick an ESLint preset",
+      "choices": [
+        {
+          "name": "Standard (https://github.com/feross/standard)",
+          "value": "standard",
+          "short": "Standard"
+        },
+        {
+          "name": "AirBNB (https://github.com/airbnb/javascript)",
+          "value": "airbnb",
+          "short": "AirBNB"
+        },
+        {
+          "name": "none (configure it yourself)",
+          "value": "none",
+          "short": "none"
+        }
+      ]
+    },
     "unit": {
       "type": "confirm",
       "message": "Setup unit tests with Karma + Mocha?"
