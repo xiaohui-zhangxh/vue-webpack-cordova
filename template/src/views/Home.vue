@@ -12,7 +12,7 @@ import Cordova from 'components/Cordova'{{#if_eq lintConfig "airbnb"}},{{/if_eq}
 export default {
   name: 'app',
   components: {
-    Hello{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
+    Hello,
     Cordova{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
   }{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
 }{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
