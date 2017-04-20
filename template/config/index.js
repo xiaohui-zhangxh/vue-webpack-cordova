@@ -15,7 +15,7 @@ module.exports = {
     // npm install --save-dev compression-webpack-plugin
     productionGzip: false,
     productionGzipExtensions: ['js', 'css'],
-    apiHost: 'http://production.example.com'
+    apiHost: '"http://production.example.com"'
   },
   dev: {
     env: require('./dev.env'),
@@ -23,6 +23,7 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {},
+    apiHost: '"http://api.lvm.me:3000"',
     // CSS Sourcemaps off by default because relative paths are "buggy"
     // with this option, according to the CSS-Loader README
     // (https://github.com/webpack/css-loader#sourcemaps)

@@ -1,6 +1,6 @@
 {
   "name": "vue-cli-template-webpack-cordova",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "license": "MIT",
   "description": "A full-featured Webpack setup with hot-reload, lint-on-save, unit testing & css extraction.",
   "scripts": {
